@@ -10,7 +10,7 @@ class CustomTextField {
     bool obscure = false,
   }) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: TextField(
         controller: controller,
         obscureText: obscure,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/UI/Button/button.dart';
 import 'package:new_app/UI/TextField/textField.dart';
-import 'package:new_app/color/color.dart';
 import 'package:new_app/gradient/gradient.dart';
 import 'package:new_app/login%20and%20register/register/register.dart';
+import 'package:new_app/screen/ScreenHome/home_screen.dart';
 
 class LoginScreenState extends StatefulWidget {
   const LoginScreenState({super.key});
@@ -35,13 +36,25 @@ class _LoginScreenStateState extends State<LoginScreenState> {
                 icon: Icons.lock,
                 obscure: true,
               ),
-              const SizedBox(height: 16),
-              TextButton(onPressed: () {}, child: const Text('Login')),
+              CustomButton.build(
+                name: 'login',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const HomeScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
               TextButton(
                 onPressed: () {},
                 child: const Text('Forgot password?'),
               ),
-              TextButton.icon(
+              CustomButton.build(
+                name: 'Register',
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -52,7 +65,6 @@ class _LoginScreenStateState extends State<LoginScreenState> {
                     ),
                   );
                 },
-                label: const Text('Register'),
               ),
             ],
           ),
