@@ -5,14 +5,14 @@ import 'package:new_app/gradient/gradient.dart';
 import 'package:new_app/UI/TextField/textField.dart';
 
 
-class RegisterScreenState extends StatefulWidget {
-  const RegisterScreenState({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<RegisterScreenState> createState() => _RegisterScreenStateState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _RegisterScreenStateState extends State<RegisterScreenState> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +48,7 @@ class _RegisterScreenStateState extends State<RegisterScreenState> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return const LoginScreenState();
+                        return const LoginScreen();
                       },
                     ),
                   );

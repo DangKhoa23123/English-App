@@ -5,14 +5,14 @@ import 'package:new_app/gradient/gradient.dart';
 import 'package:new_app/login%20and%20register/register/register.dart';
 import 'package:new_app/screen/ScreenHome/home_screen.dart';
 
-class LoginScreenState extends StatefulWidget {
-  const LoginScreenState({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<LoginScreenState> createState() => _LoginScreenStateState();
+  State<LoginScreen> createState() => _LoginScreenStateState();
 }
 
-class _LoginScreenStateState extends State<LoginScreenState> {
+class _LoginScreenStateState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +60,7 @@ class _LoginScreenStateState extends State<LoginScreenState> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return const RegisterScreenState();
+                        return const RegisterScreen();
                       },
                     ),
                   );
