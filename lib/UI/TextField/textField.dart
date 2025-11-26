@@ -9,15 +9,18 @@ class CustomTextField {
     TextEditingController? controller,
     bool obscure = false,
   }) {
-    return TextField(
-      controller: controller,
-      obscureText: obscure,
-      decoration: InputDecoration(
-        hintText: hint,
-        prefixIcon: icon != null ? Icon(icon) : null,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        filled: true,
-        fillColor: fillColor ?? ColorsApp.white,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: TextField(
+        controller: controller,
+        obscureText: obscure,
+        decoration: InputDecoration(
+          hintText: hint,
+          prefixIcon: icon != null ? Icon(icon) : null,
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+          filled: true,
+          fillColor: fillColor ?? ColorsApp.white,
+        ),
       ),
     );
   }
